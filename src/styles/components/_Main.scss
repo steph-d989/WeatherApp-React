@@ -1,0 +1,10 @@
+@import '../utils/variables.scss';
+
+input[type=text]{
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+
+    &:focus{
+        border: 1px solid $primary-color
+    }
+}
