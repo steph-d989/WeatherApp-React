@@ -10,18 +10,18 @@ export default function WeatherCard({
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={`https://openweathermap.org/img/wn/{weather.icon}@2x.png`}
-        title={dt_txt}
+        image={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+        /* title={dt_txt} */
       />
       <CardContent>
         <Typography gutterBottom variant="body2" component="div">
-          Hora: {dt_txt}
+          Hora: {dt_txt.slice(10,)}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Temperatura: {main.temp}
+          Temperatura: {main.temp}°C
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Descripcion: {weather.description}
+          Descripcion: {weather[0].description}
         </Typography>
       </CardContent>
     </Card>

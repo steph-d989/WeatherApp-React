@@ -26,6 +26,7 @@ const Main = () => {
         const res = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=8&appid=${key}&units=metric`);
         const resp = res.data;
         setWeather(resp.list);
+        console.log(resp.list)
       } catch (e) {
         console.log("no funciona la llamada a la api"); // No pintes nada
       }
@@ -33,7 +34,7 @@ const Main = () => {
     getWeather();
   }, [city]);
   return (
-    <section>
+    <section className="main">
       <form ref={form} onSubmit={handleSubmit} className="form">
         <div>
           <label htmlFor="keyword">Ciudad: </label>
